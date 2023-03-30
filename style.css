@@ -1,0 +1,20 @@
+.hidden {
+    visibility: hidden;
+}
+
+nav {
+    width: 30%; 
+    user-select: none;
+}
+
+.nav--item {
+    border: 2pt solid black; 
+}
+
+.submenuContainer {
+    display: none;
+}
+
+.show {
+    display: block;
+}
