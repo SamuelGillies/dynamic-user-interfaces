@@ -88,7 +88,7 @@
     justify-content: space-evenly;
 }
 
-.mobile--icon {
+.menuBlockMobile {
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -99,10 +99,26 @@
     height: 10vh;
 }
 
-.mobile--icon:hover {
+.menuBlockMobile:hover {
     border: 2pt solid var(--secondary-dark);
     background-color: var(--secondary-light);
     color: var(--secondary-dark); 
+}
+.submenuBlockMobile {
+    display: none;
+    opacity: 0;
+}
+
+.show--mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1pt solid black; 
+    background-color: var(--secondary-dark);
+    color: var(--secondary-light);
+    opacity: 1;    
 }
 
 
@@ -114,6 +130,7 @@
 
     #navbar--mobile {
         display: flex;
+        flex-direction: column;
     }
 
 }
