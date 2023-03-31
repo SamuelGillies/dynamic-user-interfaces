@@ -3,6 +3,9 @@ let item1Submenu, item2Submenu;
 
 function menuItemGeneration(items) {
     for (i = 0; i < items.length; i++) {
+        let menuItemContainer = document.createElement('div');
+        menuItemContainer.setAttribute('class', 'menuItemContainer');
+        menuItemContainer.setAttribute('id', `menuItemContainer${i}`); 
         let menuItem = document.createElement('div');
         menuItem.setAttribute('class', 'menuBlock');
         menuItem.setAttribute('id', `menuItem${i}`); 
@@ -19,8 +22,8 @@ function menuItemGeneration(items) {
                 submenuItem.innerHTML = items[i][1][j];
                 submenuBlock.append(submenuItem);
             };
-        menuItem.append(submenuBlock);
-        navBlock.append(menuItem);
+        menuItemContainer.append(menuItem,submenuBlock);
+        navBlock.append(menuItemContainer);
 
         if (i == 0) {
             item1Submenu = submenuBlock
@@ -32,12 +35,13 @@ function menuItemGeneration(items) {
 
 (function createMenu() {
     
-    menuItems = [['about', ['item 1', 'item 2', 'item 3']], ['contact', ['item 4', 'item 5', 'item 6']]];
+    menuItems = [['about', ['Biography', 'CV', 'Press Clippings']], ['contact', ['Agent Details', 'Email', 'Social Media']]];
     menuItemGeneration(menuItems);
 
     navBlock.addEventListener('click', (e) => {
         let item1Submenu = document.getElementById(`aboutSubmenu`); 
         if (e.target.id === `menuItem0`) {
+            item2Submenu.classList.remove('show'); 
             item1Submenu.classList.toggle('show');
         }  
     }); 
@@ -45,6 +49,7 @@ function menuItemGeneration(items) {
     navBlock.addEventListener('click', (e) => {
         let item2Submenu = document.getElementById(`contactSubmenu`); 
         if (e.target.id === `menuItem1`) {
+            item1Submenu.classList.remove('show'); 
             item2Submenu.classList.toggle('show');
         };
     }); 
