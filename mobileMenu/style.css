@@ -13,7 +13,7 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#main-menu {
+#main-menu, #main-menu--mobile {
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -73,10 +73,37 @@
     transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
+#navbar--desktop {
+    display: flex;
+}
+
 #navbar--mobile {
     display: none;
 }
 
+#main-menu--mobile {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.mobile--icon {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border: 2pt solid var(--primary-light);
+    background-color: var(--secondary-dark);
+    color: var(--primary-light); 
+    width: 10vh;
+    height: 10vh;
+}
+
+.mobile--icon:hover {
+    border: 2pt solid var(--secondary-dark);
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark); 
+}
 
 
 @media only screen and (max-width: 600px) {
