@@ -89,3 +89,37 @@
     opacity: 1; 
     transition-delay: 0ms;
 }
+
+.slideNav { 
+    position: absolute; 
+    left: 25%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    width: 40vw; 
+    height: 30px; 
+    background-color: var(--secondary-dark);
+    color: white;
+    border-radius: 32px;
+}
+
+.navBtn {
+    height: 20px; 
+    width: 20px; 
+    border: 1pt solid black; 
+    border-radius: 50%; 
+    background-color: white;
+    box-shadow: 0 0 0 0;
+}
+
+.navBtn:hover, 
+.navBtn:active {
+    background-color: rgb(56, 56, 56);
+    border: 1pt solid white; 
+}
+
+.navBtnSelected {
+    background-color: rgb(56, 56, 56);
+    border: 1pt solid white; 
+}
