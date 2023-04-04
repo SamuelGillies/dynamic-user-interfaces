@@ -1,0 +1,37 @@
+:root {
+    --primary-dark: #333;
+    --secondary-dark: #444;
+    --primary-light: #eee;
+    --secondary-light: #ddd;
+    --selected: rgb(192, 192, 192); 
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#navbar {
+    background-color: var(--primary-dark);
+    height: 10rem; 
+}
+
+#form {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.formField {
+    display: flex; 
+    flex-direction: column;
+    width: 25rem; 
+}
