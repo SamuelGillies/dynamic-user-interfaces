@@ -35,3 +35,7 @@
     flex-direction: column;
     width: 25rem; 
 }
+
+input:invalid {
+    border: 3pt dashed red;
+}
